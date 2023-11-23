@@ -1,0 +1,35 @@
+<html> 
+   <head> 
+      <title>Pill Detected</title> 
+   </head> 
+   <script>
+      function checkCookies() {
+         var fname_name_percent = '{{ fname_name_percent | tojson | safe }}';
+         var verlist = fname_name_percent;
+         var listdeseses1 = verlist.replace('[',' ');
+         var listdeseses3 = listdeseses1.replace(']',' ');
+        //var listdeseses3 = listdeseses2.replace('"',' ');
+        var coolVarParts = listdeseses3.split(','); //
+         document.getElementById("p1").innerHTML = "Uploded File: "+coolVarParts[0];
+         document.getElementById("p2").innerHTML = "Pill Identfied as: "+ coolVarParts[1];
+         document.getElementById("p3").innerHTML = "With "+coolVarParts[2] +"percent confidence";
+      }
+   </script>
+   <body onload="checkCookies();">
+      <table style="background-color:powderblue;" >
+         <tr><td> 
+            <label id = "p1"> 
+               Welcome to GeeksforGeeks 
+            </label>
+         </td>
+         </tr>
+         <tr>
+             <td><label id = "p2"></label></td>
+         </tr>
+         <tr> 
+             <td><label id = "p3"></label></td>
+         </tr>
+      </table> 
+      <h3>Thanks for using service</h3>
+   </body> 
+   </html>
