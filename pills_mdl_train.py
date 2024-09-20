@@ -5,7 +5,7 @@ import tensorflow as tf
 
 from tensorflow import keras
 from keras import layers
-from keras.models import Sequential
+from keras.models import Sequential # type: ignore
 
 import pathlib
 
@@ -63,7 +63,7 @@ history = model.fit(
   epochs=epochs
 )
 
-model.save_weights('pill_model.h5')
+model.save_weights('pill_model.weights.h5')
 
 acc = history.history['accuracy']
 val_acc = history.history['val_accuracy']

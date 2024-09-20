@@ -27,7 +27,7 @@ model = Sequential([
   layers.Dense(num_classes)
 ])
 
-model.load_weights('pill_model.h5')
+model.load_weights('pill_model.weights.h5')
 
 
 def detect_pill_from_img(image_file):
@@ -46,4 +46,3 @@ def detect_pill_from_img(image_file):
       .format(class_names[np.argmax(score)], 100 * np.max(score))
   )
   return class_names[np.argmax(score)],100 * np.max(score)
-
