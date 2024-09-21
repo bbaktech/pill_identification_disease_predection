@@ -4,7 +4,7 @@ import tensorflow as tf
 
 from tensorflow import keras
 from keras import layers
-from keras.models import Sequential
+from keras.models import Sequential # type: ignore
 
 num_classes = 8
 img_height = 180
